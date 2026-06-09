@@ -10,12 +10,18 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strict": false,
-    "types": ["node"],
-    "ignoreDeprecations": "6.0",
+    "types": [
+      "node"
+    ],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-
+    "emitDecoratorMetadata": true,
+    "ignoreDeprecations": "6.0"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

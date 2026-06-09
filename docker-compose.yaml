@@ -1,15 +1,13 @@
 services:
 
   database:
-    container_name: development-meetings
+    container_name: development-meetings-db-compose
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
       - MYSQL_DATABASE=development_meetings
       - MYSQL_TCP_PORT=3306
     expose:
       - 3306
-    ports:
-      - 3307:3306
     build: ./database
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
@@ -36,3 +34,5 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile.compose
+    depends_on:
+      - backend
