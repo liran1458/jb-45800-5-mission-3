@@ -1,0 +1,35 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: 0 2px 10px gray;
+}
+
+.Header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.Header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.Header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.Header nav a:hover {
+    background-color: #3b3b3b;
+}
+
+.Header nav a.active {
+    background-color: #5b5b5b;
+}

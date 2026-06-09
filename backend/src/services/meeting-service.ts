@@ -15,19 +15,20 @@ class MeetingService {
     public async addMeeting(meeting: Partial<MeetingModel>): Promise<MeetingModel> {
         return MeetingModel.create(meeting);
     }
-    public async updateMeeting(meeting: MeetingModel): Promise<MeetingModel> {
-        await MeetingModel.update({ ...meeting }, {
+    public async updateMeeting(meeting: Partial<MeetingModel>): Promise<MeetingModel | null> {
+
+        await MeetingModel.update(meeting, {
             where: { id: meeting.id }
         });
 
-        return meeting;
+        return MeetingModel.findByPk(meeting.id);
     }
 
     public async deleteMeeting(meetingId: string): Promise<number> {
-    return MeetingModel.destroy({
-        where: { id: meetingId }
-    });
-}
+        return MeetingModel.destroy({
+            where: { id: meetingId }
+        });
+    }
 }
 
 const meetingService = new MeetingService();

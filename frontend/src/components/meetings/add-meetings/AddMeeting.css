@@ -1,0 +1,51 @@
+.AddMeeting {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.AddMeeting form {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px gray;
+    background-color: white;
+}
+
+.AddMeeting h2 {
+    text-align: center;
+}
+
+.AddMeeting input,
+.AddMeeting textarea,
+.AddMeeting select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.AddMeeting textarea {
+    resize: none;
+    min-height: 90px;
+}
+
+.AddMeeting button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.AddMeeting span {
+    color: red;
+    font-size: 14px;
+}
+.cancel-button {
+    background-color: lightgray;
+}

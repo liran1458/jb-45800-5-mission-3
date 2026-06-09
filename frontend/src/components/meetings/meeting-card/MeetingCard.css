@@ -1,0 +1,41 @@
+.MeetingCard {
+    width: 320px;
+    padding: 18px;
+    margin: 15px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px gray;
+    text-align: left;
+}
+
+.MeetingCard.future {
+    background-color: orange;
+}
+
+.MeetingCard.past {
+    background-color: lightgreen;
+}
+
+.MeetingCard h3 {
+    margin-top: 0;
+}
+
+.MeetingCard span {
+    font-weight: bold;
+}
+
+.MeetingCard .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.MeetingCard a,
+.MeetingCard button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

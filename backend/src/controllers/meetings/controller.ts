@@ -37,8 +37,9 @@ export async function newMeeting(request: Request, response: Response, next: Nex
 export async function updateMeeting(request: Request, response: Response, next: NextFunction) {
     try {
         request.body.id = request.params.meetingId as string;
-        const meeting = new MeetingModel(request.body);
-        const updatedMeeting = await meetingService.updateMeeting(meeting);
+
+        const updatedMeeting = await meetingService.updateMeeting(request.body);
+
         response.json(updatedMeeting);
     }
     catch (err: any) {
